@@ -7,12 +7,12 @@ class Car:
     def __init__ (self, name, space):
         self.name = name
         self.space = space
-        self.passengers = 0
+        self.passengers = []
 
     def add_passenger(self, passenger:Human):
 
-        if  <= self.passengers:
-            self.passengers += 1
+        if self.space < len(self.passengers):
+            self.passengers.append(passenger)
 
     def info(self):
         print(f"Name: {self.name}")

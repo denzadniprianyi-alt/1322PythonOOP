@@ -1,3 +1,5 @@
+import random
+
 class BankAccount:
     def __init__(self, account_number, balance):
         self.account_number = account_number
@@ -32,20 +34,20 @@ mono1 = BankAccount("213",   100)
 mono2 = BankAccount("123",   100)
 
 mono1.show_balance()
-mono1.deposit(1000)
+mono1.deposit(random.randint(100, 1000))
 mono1.show_balance()
-mono1.withdraw(100)
+mono1.withdraw(random.randint(10, 100))
 mono1.show_balance()
 
 mono2.show_balance()
-mono2.deposit(1000)
+mono2.deposit(random.randint(100, 1000))
 mono2.show_balance()
-mono2.withdraw(100)
+mono2.withdraw(random.randint(10, 100))
 mono2.show_balance()
 
 monoBank = Bank("Mono")
 
-monoBank.send(mono1, mono2, 1000)
+monoBank.send(mono1, mono2, random.randint(10, 1000))
 mono1.show_balance()
 mono2.show_balance()
 

@@ -47,7 +47,7 @@ mono2.show_balance()
 
 monoBank = Bank("Mono")
 
-monoBank.send(mono1, mono2, random.randint(10, 1000))
+monoBank.send(mono1, mono2, random.randint(10, 100))
 mono1.show_balance()
 mono2.show_balance()
 
